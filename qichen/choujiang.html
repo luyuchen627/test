@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>码上诚献</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/weixin-active.css">
+	<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src='js/myjs.js'></script>
+	<script type="text/javascript" src='js/ort.js'></script>
+</head>
+<body>
+	<div class="con">
+		<div class="header"></div>
+		<div class="content">
+			<div class="content_title">
+				<h2>幸运“触手”可及</h2>
+				<p>轻触任一款启辰车型牌即可抽奖</p>
+			</div>
+			<div class="choujiang_area">
+				<ul>
+					<li><a href="javascript:void(0)"><img src="img/qc_01.png" alt=""></a></li>
+					<li><a href="javascript:void(0)"><img src="img/qc_02.png" alt=""></a></li>
+					<li><a href="javascript:void(0)"><img src="img/qc_03.png" alt=""></a></li>
+					<li><a href="javascript:void(0)"><img src="img/qc_04.png" alt=""></a></li>
+					<li><a href="javascript:void(0)"><img src="img/qc_05.png" alt=""></a></li>
+					<li><a href="javascript:void(0)"><img src="img/qc_06.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$('.choujiang_area a').click(function(){
+				if(window.location.href.indexOf("t=1")!=-1){
+					window.location.href='changwai_result.html';
+				}else{
+					window.location.href='choujiang_result.html';
+				}
+			});
+			if(getCookie('lu')){
+				window.location.href='yicanjia.html';
+			}else{
+				setCookie('lu','12',7);}
+		});
+	</script>
+</body>
+</html>

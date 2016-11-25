@@ -1,0 +1,394 @@
+/*主题背景*/
+.con{
+	position: relative;
+	width: 640px;
+	min-height: 800px;
+	margin: 0 auto;
+	background: url(../img/bg01.jpg) bottom center no-repeat;
+}
+
+/*头部样式（汽车展示）*/
+.header{
+	width: 100%;
+	height: 271px;
+	background: url(../img/bg02.jpg) center center no-repeat;
+}
+
+.content{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.content_title{
+	text-align: center;
+}
+
+.content_title h2{
+	font: 400 30px/40px '微软雅黑';
+	color: #00f;
+}
+
+.content_title p{
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+}
+
+.content_title_img{
+	width: 509px;
+	height: 108px;
+}
+
+/*抽奖按钮*/
+.choujiang{
+	width: 433px;
+	height: 97px;
+	margin: 10px auto;
+	color: #fff;
+	text-align: center;
+	background: url(../img/btn01.png) center center no-repeat;
+	font: 400 40px/97px '微软雅黑';
+	cursor:pointer;
+	outline: none;
+}
+
+/*活动规则按钮*/
+.active_rule{
+	display: block;
+	text-align: center;
+	font: 400 20px/30px '微软雅黑';
+	font-style: oblique;
+}
+
+/*活动规则展开*/
+.active_shuoming,.submit_tip{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -294px;
+	width: 560px;
+	min-height: 250px;
+	text-align: center;
+	padding: 20px 10px;
+	border: 4px solid #00f;
+	border-radius: 10px;
+	background-color: #fff;
+	z-index: 3;
+	display: none;
+}
+
+.shuoming_title{
+	font: 400 30px/30px '微软雅黑';
+	color: #00f;
+	margin: 10px 0px;
+	text-align: left;
+}
+
+.shuoming_text{
+	font: 400 20px/30px '微软雅黑';
+	text-indent: 2em;
+	color: #333;
+	text-align: left;
+	margin: 20px 0px;
+	overflow: hidden;
+}
+
+.shuoming_text em{
+	float: left;
+	display: inline-block;
+	width: 40px;
+	text-indent: 0;
+}
+
+.shuoming_text span{
+	float: left;
+	display: inline-block;
+	text-indent: 0px;
+	width: 500px;
+}
+
+/*活动说明展开时的遮罩*/
+.active_shuoming_mask{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	z-index: 2;
+	display: none;
+}
+
+.active_shuoming_mask_show{
+	display: block;
+}
+
+/*确认是否在现场*/
+.confirm_scene{
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -294px;
+	width: 560px;
+	min-height: 400px;
+	padding: 20px 10px;
+	border: 4px solid #00f;
+	border-radius: 10px;
+	background-color: #fff;
+	z-index: 3;
+	display: none;
+}
+
+.confirm_scene_show{
+	display: block;
+}
+
+
+.confirm_scene_text{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.confirm_scene_text span{
+	display: block;
+	font: 400 30px/40px '微软雅黑';
+	color: #00f;
+	margin: 10px 0px;
+}
+
+/*抽奖页面*/
+/*抽奖区域*/
+.choujiang_area{
+	padding: 18px;
+	overflow: hidden;
+}
+
+.choujiang_area ul{
+	margin-right: -2px;
+	overflow: hidden;
+}
+
+.choujiang_area li{
+	float: left;
+	margin-right: 2px;
+}
+
+/*没有中奖*/
+.no_zhongjiang{
+	padding: 0px 20px;
+}
+
+.no_zhongjiang h2{
+	font: 400 40px/50px '微软雅黑';
+	color: #f00;
+}
+
+.no_zhongjiang p{
+	padding: 10px 125px;
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+}
+
+.no_zhongjiang p span{
+	color: #00f;
+}
+
+/*已参加抽奖活动*/
+.yicanjia{
+	padding: 0px 20px;
+}
+
+.yicanjia h2{
+	font: 400 40px/50px '微软雅黑';
+	color: #00f;
+}
+
+.yicanjia p{
+	padding: 10px 125px;
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+}
+
+.yicanjia p span{
+	color: #00f;
+}
+
+/*留下联系方式*/
+.leave_info_title{
+	width: 312px;
+	height: 75px;
+	margin: 0 auto 20px;
+	padding: 30px 0px;
+	background: url(../img/qckhj.png) bottom center no-repeat;
+}
+
+.leave_info_text{
+	color: #999;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 0 20px;
+}
+
+.submit_tip h2{
+	font: 400 30px/50px '微软雅黑';
+	text-align: center;
+	color: #00f;
+}
+
+.submit_tip p{
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+	margin: 20px 0px;
+}
+
+/*用户姓名*/
+.info{
+	padding: 0 20px;
+	margin: 20px auto;
+	text-align: center;
+}
+.username,.usercontact{
+	display: block;
+	width: 594px;
+	height: 86px;
+	margin-bottom: 20px;
+	text-indent: 110px;
+	font: 400 30px/86px 'Arail';
+	text-align: left;
+}
+
+.username{
+	background: url(../img/shuru1.jpg) center left no-repeat;
+}
+
+.usercontact{
+	background: url(../img/shuru2.jpg) center left no-repeat;
+}
+
+/*分享*/
+.share{
+	padding: 50px;
+	overflow: hidden;
+}
+
+.share span{
+	float: left;
+	height: 68px;
+	color: #333;
+	font: 400 20px/68px '微软雅黑';
+}
+
+.share a{
+	float: left;
+	width: 68px;
+	height: 68px;
+	margin-left: 30px;
+}
+
+.share a img{
+	float: left;
+	width: 68px;
+	height: 68px;
+}
+
+/*现场抽奖结果*/
+.cj_result{
+	font: 400 40px/50px "微软雅黑";
+	text-align: center;
+	color: #00a;
+}
+
+/*奖品展示*/
+.jiangpin{
+	margin: 0px 20px;
+	background-color: #fff;
+}
+
+.jiangpin_shuoming{
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+	padding: 10px 0px 20px 20px;
+}
+
+.jiangpin_ma{
+	width: 418px;
+	height: 75px;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	background: url(../img/bg03.jpg) center center no-repeat;
+}
+
+.jiangpin_ma i{
+	display: inline-block;
+	float: left;
+	width: 83px;
+	height: 75px;
+	color: #fff;
+	font: 400 20px/75px '微软雅黑';
+	font-style: italic;
+	text-indent: 10px;
+}
+
+.jiangpin_show{
+	width: 485px;
+	height: 294px;
+	margin: 30px auto;
+	background: url(../img/qc_07.jpg);
+}
+
+.more_jiangpin{
+	margin: 0px 20px;
+	font: 400 40px/50px '微软雅黑';
+	color: #00a;
+}
+
+.more_jiangpin_shuoming{
+	margin: 10px 20px;
+	font: 400 20px/30px '微软雅黑';
+	color: #999;
+}
+
+/*分享指引*/
+.share_mask{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: #000;
+	opacity: 0.2;
+	display: none;
+}
+
+/*场外抽奖*/
+.cw_result{
+	font: 400 40px/50px "微软雅黑";
+	text-align: center;
+	color: #f00;
+}
+
+.cw_jiangpin_shuoming{
+	padding: 10px 30px;
+	font: 400 20px/30px "微软雅黑";
+	color: #999;
+}
+
+.cw_jiangpin_show{
+	width: 564px;
+	height: 321px;
+	margin: 0 auto;
+	background: url(../img/y10.png) center center no-repeat;
+}
+
+.chongzhi_tip{
+	padding: 10px 30px;
+	font: 400 20px/30px "微软雅黑";
+	color: #999;
+}
+
+.chongzhi_tip h2{
+	padding: 10px 0px;
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>启辰开回家</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/weixin-active.css">
+	<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src='js/ort.js'></script>
+</head>
+<body>
+	<div class="con">
+		<div class="leave_info_title"></div>
+		<p class="leave_info_text">考验人品的时候到了，只要留下您的姓名和联系方式，就有机会抽中启辰R30，启辰晨风一年使用权大奖</p>
+		<form class="info" method="" action="javascript:void(0)">
+			<input class="username" type="text" name="" value="请输入姓名">
+			<input class="usercontact" type="text" name="" value="请输入手机号码">
+			<button class="choujiang">提交</button>
+			<a href="javascript:void(0)" class="active_rule">活动规则</a>
+		</form>
+		<div class="active_shuoming">
+			<h2 class="shuoming_title">活动规则</h2>
+			<p class="shuoming_text">
+				<em>1、</em>
+				<span>广州车展期间：关注启辰官方微信，参与“码上有礼，辰心放送”活动并留下本人姓名及手机号码，即可参与。</span>
+			</p>
+			<p class="shuoming_text">
+				<em>2、</em>
+				<span>11月21至11月29日，每天抽取一台启辰R30一年使用权大奖（现场兑奖）。11月29日抽取终极大奖：一台启辰晨风一年使用权。</span>
+			</p>
+			<p class="shuoming_text">
+				<em>3、</em>
+				<span>每天16:00对当天所有参与者进行抽选，抽中的参与者若不在现场，将取消中奖者资格并继续抽奖（启辰晨风一年使用权除外）。</span>
+			</p>
+			<p class="shuoming_text">
+				<em>4、</em>
+				<span>终极大奖从车展期间所有参与者中抽取，后续联系进行兑奖。</span>	
+			</p>
+			<p class="shuoming_text">
+				<em>5、</em>
+				<span>此活动每人仅限参与一次。</span>
+			</p>
+			<p class="shuoming_text">
+				<em>6、</em>
+				<span>本次活动最终解释权归东风日产启辰所有。</span>
+			</p>
+			<p class="choujiang">知道啦</p>
+		</div>
+		<div class="active_shuoming_mask"></div>
+		<div class="share">
+			<span>分享好友积攒人品：</span>
+			<a href="javascript:void(0)"><img src="img/weixin.png" alt=""></a>
+			<a href="javascript:void(0)"><img src="img/xlwb.png" alt=""></a>
+			<a href="javascript:void(0)"><img src="img/txwb.png" alt=""></a>
+		</div>
+		<div class="submit_tip">
+			<h2>提交成功</h2>
+			<p>说好的16:00现场抽奖，启辰展台与您不见不散</p>
+			<button class="choujiang">不见不散</button>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$('.info input[type=text]').focus(function(){
+				if($(this).val()=="请输入姓名"||$(this).val()=="请输入手机号码"){
+					$(this).val('');
+				}
+			});
+
+			$('.username').blur(function(){
+				if($(this).val()==""){
+					$(this).val('请输入姓名');
+				}
+			});
+
+			$('.usercontact').blur(function(){
+				if($(this).val()==""){
+					$(this).val('请输入手机号码');
+				}
+			});
+
+			$('.info .choujiang').eq(0).click(function(){
+				$('.submit_tip').css('display','block');
+				/*$(this).attr('disable','disable');*/
+			});
+
+			$('.submit_tip .choujiang').eq(0).click(function(){
+				$('.submit_tip').css('display','none');
+			});
+
+			$('.active_rule').eq(0).click(function(){
+				$('.active_shuoming_mask').eq(0).addClass('active_shuoming_mask_show');
+				$('.active_shuoming').eq(0).css('display','block');
+				$('.active_shuoming .choujiang').click(function(){
+					$('.active_shuoming_mask').eq(0).removeClass('active_shuoming_mask_show');
+					$('.active_shuoming').eq(0).css('display','none');
+				})
+			});
+		});
+	</script>
+</body>
+</html>

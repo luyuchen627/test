@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>抽奖结果</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/weixin-active.css">
+	<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src='js/ort.js'></script>
+</head>
+<body>
+	<div class="con">
+		<div class="cw_result">人品不错哦！</div>
+		<p class="cw_jiangpin_shuoming">恭喜您抽中价值<em>30</em>元的手机话费！请预留联系方式，24小时内话费将为您送上，请留意短信，谢谢！</p>
+		<div class="cw_jiangpin_show"></div>
+		<div class="chongzhi_tip">
+			<h2 >请输入手机号码24小时内为您充值</h2>
+			<input class="usercontact" type="text" name="" value="请输入手机号码">
+		</div>
+		<p class="choujiang">确认提交</p>
+		<div class="share">
+			<span>分享好友积攒人品：</span>
+			<a href="javascript:void(0)"><img src="img/weixin.png" alt=""></a>
+			<a href="javascript:void(0)"><img src="img/xlwb.png" alt=""></a>
+			<a href="javascript:void(0)"><img src="img/txwb.png" alt=""></a>
+		</div>
+	</div>
+
+	<script>
+		var imgarr=['img/y10.png','img/y20.png','img/y30.png'];
+		var index=Math.floor(Math.random()*imgarr.length);
+		$(function(){
+			$('.usercontact').focus(function(){
+				if($(this).val()=="请输入姓名"||$(this).val()=="请输入手机号码"){
+					$(this).val('');
+				}
+			});
+
+			$('.usercontact').blur(function(){
+				if($(this).val()==""){
+					$(this).val('请输入手机号码');
+				}
+			});
+
+			$('.cw_jiangpin_show').eq(0).css({backgroundImage:"url("+imgarr[index]+")"});
+
+			$('.cw_jiangpin_shuoming em').eq(0).text((index+1)*10);
+		});
+	</script>
+</body>
+</html>

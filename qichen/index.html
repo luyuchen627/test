@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/weixin-active.css">
+	<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src='js/ort.js'></script>
+</head>
+<body>
+	<div class="con">
+		<div class="header"></div>
+		<div class="content">
+			<img class="content_title_img" src="img/msyl.png" alt="">
+			<p class="choujiang">我在车展 马上抽奖</p>
+			<p class="choujiang">不在现场 试试手气</p>
+			<a href="javascript:void(0)" class="active_rule">活动规则</a>
+		</div>
+		<div class="active_shuoming">
+			<h2 class="shuoming_title">活动说明</h2>
+			<p class="shuoming_text">活动抽奖哪家强，东风日产看启辰。广州车展期间，启辰君为您准备了多彩铅笔套装，购车代金券，晨风车模，手机话费等精美礼品；</p>
+			<p class="shuoming_text">车展现场参与活动的用户百分之百中奖，留下联系方式更有机会赢得启辰R30，启辰晨风一年使用权大奖，场外用户参与活动也有机会获得话费充值大奖。</p>
+			<p class="shuoming_text">心动了吗？那就马上行动吧！</p>
+			<p class="shuoming_text">参与车展现场抽奖活动，中奖礼品只限当天在启辰展台现场兑奖，过期不候哦，详情请咨询启辰展台工作人人员。</p>
+			<p class="choujiang">我要抽奖</p>
+		</div>
+		<div class="active_shuoming_mask"></div>
+		<div class="confirm_scene">
+			<p class="confirm_scene_text">
+				<span>请确认您是否在车展现场，</span>
+				<span>以免无法兑奖，</span>
+				<span>不在车展现场还可以抽取话费哦</span>
+			</p>
+			<p class="choujiang">确认</p>
+			<p class="choujiang">重新选择</p>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$('.active_rule').eq(0).click(function(){
+				$('.active_shuoming_mask').eq(0).addClass('active_shuoming_mask_show');
+				$('.active_shuoming').eq(0).css('display','block');
+				$('.active_shuoming .choujiang').click(function(){
+					$('.active_shuoming_mask').eq(0).removeClass('active_shuoming_mask_show');
+					$('.active_shuoming').eq(0).css('display','none');
+				})
+			});
+
+			$('.choujiang').eq(0).click(function(){
+				$('.active_shuoming_mask').eq(0).addClass('confirm_scene_show');
+				$('.confirm_scene').eq(0).css('display','block');
+				$('.confirm_scene .choujiang').eq(1).click(function(){
+					$('.active_shuoming_mask').eq(0).removeClass('confirm_scene_show');
+					$('.confirm_scene').eq(0).css('display','none');
+				});
+
+				$('.confirm_scene .choujiang').eq(0).click(function(){
+					window.location.href='choujiang.html';
+				});
+			});
+
+			$('.choujiang').eq(1).click(function(){
+				window.location.href='choujiang.html?t=1';
+			});
+		});
+	</script>
+</body>
+</html>
