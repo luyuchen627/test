@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DSP</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+</head>
+<body>
+	<div class="menu">
+		<div class="mlogo"></div>
+		<ul class="mnav">
+			<li class="mlist"><a href="shouye.html">51DSP介绍</a></li>
+			<li class="mlist"><a href="shipinAD.html">视频广告</a></li>
+			<li class="mlist"><a href="mobilad.html">移动端广告</a></li>
+			<li class="mlist"><a href="waibao.html">51DSP案例</a></li>
+			<li class="mlist"><a href="jieshao.html">关于我们</a></li>
+			<li class="mlist"><a href="contactus.html">联系方式</a></li>
+		</ul>
+		<div class="mzixun">
+			<a href="javacript:void(0)"></a>
+		</div>
+	</div>
+	<div class="header">
+		<div class="hl">
+			<div class="logo"></div>
+			<div class="time">2016-10-01</div>
+		</div>
+		<ul class="hnav">
+			<li class="hlist"><a href="shouye.html">51DSP介绍</a></li>
+			<li class="hlist"><a href="shipinAD.html">视频广告</a></li>
+			<li class="hlist"><a href="mobilad.html">移动端广告</a></li>
+			<li class="hlist"><a href="waibao.html">51DSP案例</a></li>
+			<li class="hlist"><a href="jieshao.html">关于我们</a></li>
+			<li class="hlist"><a href="contactus.html">联系方式</a></li>
+			<li class="hnavbg"></li>
+		</ul>
+	</div>
+	<div class="con">
+		<div class="page page1">
+			<p class="p1text">51DSP.Cn</p>
+			<img class="deng" src="img/deng.png" alt="">
+			<span class="p1t2">大数据精准营销时代</span>
+			<span class="p1t3">DSP 视频广告助你找到精准用户</span>
+		</div>
+		<div class="page ctp1">
+			<div class="w1024">
+				<p class="cttext1">咨询留言</p>
+				<p class="cttext2">请仔细填写以下内容，方便准确提供投放方案</p>
+				<form class="form1">
+					<div class="ctipt">
+						<label><span class="nameipt">姓名：</span><input  type="text" name="" value=""></label>
+					</div>
+					<div class="ctipt">
+						<label><span>联系电话：</span><input  type="text" name="" value=""></label>
+					</div>
+					<div class="ctipt">
+						<label><span>邮箱地址：</span><input  type="text" name="" value=""></label>
+					</div>
+					<div class="ctipt1">
+						<span>广告需求：</span>
+						<div class="ctright">
+							<label><input  type="radio" name="AdRequest" value="贴片广告">贴片广告</label>
+							<label><input  type="radio" name="AdRequest" value="暂停广告">暂停广告</label>
+							<label><input  type="radio" name="AdRequest" value="移动端广告">移动端广告</label>
+							<label class="otherselect"><input   type="radio" name="AdRequest" value="其他">其他<input class="othertype" type="text" name="AdRequest" placeholder="在这里输入广告类型"></label>
+						</div>
+					</div>
+					<div class="ctipt1">
+						<span>预计花费：</span>
+						<div class="ctright">
+							<label><input  type="radio" name="AdRequest" value="5万内">5万内</label>
+							<label><input  type="radio" name="AdRequest" value="5~30万">5~30万</label>
+							<label><input  type="radio" name="AdRequest" value="30~100万">30~100万</label>
+							<label><input  type="radio" name="AdRequest" value="100万以上">100万以上</label>
+						</div>
+					</div>
+					<div class="ctipt1">
+						<span>留言备注：</span>
+						<textarea id="leavemessage" editable="false"></textarea>
+					</div>
+					<div class="ctipt1"><button class="submitbtn">提交留言</button></div>
+				</form>
+			</div>
+			<div class="footer">
+				<p class="fttext">京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763</p>
+				<p class="fttext">Copyright©2015 51dsp.com All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/index1.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+		$(".otherselect").click(function(){
+			$(".othertype").focus();
+		});
+		$(".othertype").focus(function(){
+			$(".otherselect").find("input").eq(0).attr("checked","checked");
+		});
+		$(".othertype").blur(function(){
+			$(".otherselect").find("input").eq(0).removeAttr("checked");
+		});
+	</script>
+</body>
+</html>

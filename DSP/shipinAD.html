@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DSP</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/clear.css">
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+</head>
+<body>
+	<div class="menu">
+		<div class="mlogo"></div>
+		<ul class="mnav">
+			<li class="mlist"><a href="shouye.html">51DSP介绍</a></li>
+			<li class="mlist"><a href="shipinAD.html">视频广告</a></li>
+			<li class="mlist"><a href="mobilad.html">移动端广告</a></li>
+			<li class="mlist"><a href="waibao.html">51DSP案例</a></li>
+			<li class="mlist"><a href="jieshao.html">关于我们</a></li>
+			<li class="mlist"><a href="contactus.html">联系方式</a></li>
+		</ul>
+		<div class="mzixun">
+			<a href="javacript:void(0)"></a>
+		</div>
+	</div>
+	<div class="header">
+		<div class="hl">
+			<div class="logo"></div>
+			<div class="time">2016-10-01</div>
+		</div>
+		<ul class="hnav">
+			<li class="hlist"><a href="shouye.html">51DSP介绍</a></li>
+			<li class="hlist"><a href="shipinAD.html">视频广告</a></li>
+			<li class="hlist"><a href="mobilad.html">移动端广告</a></li>
+			<li class="hlist"><a href="waibao.html">51DSP案例</a></li>
+			<li class="hlist"><a href="jieshao.html">关于我们</a></li>
+			<li class="hlist"><a href="contactus.html">联系方式</a></li>
+			<li class="hnavbg"></li>
+		</ul>
+	</div>
+	<div class="con">
+		<div class="page page1">
+			<p class="p1text">51DSP.Cn</p>
+			<img class="deng" src="img/deng.png" alt="">
+			<span class="p1t2">大数据精准营销时代</span>
+			<span class="p1t3">DSP 视频广告助你找到精准用户</span>
+		</div>
+		<div class="page sp2">
+			<div class="w1024">
+				<p class="cttext1">为广告主搭建庞大视频媒体组合</p>
+				<p class="cttext2">可覆盖中国85%网民，每天广告投放量可达5亿次曝光 !</p>
+				<div class="sp2con">
+					<div class="sp2_1"></div>
+					<div class="sp2_l">
+						<ul class="sp2list">
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+						</ul>
+						<ul class="sp2list">
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+						</ul>
+					</div>
+					<div class="sp2_m"></div>
+					<div class="sp2_r">
+						<ul class="sp2list">
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+						</ul>
+						<ul class="sp2list">
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+							<li><img src="img/sp3.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page sp3">
+			<div class="w1024">
+				<ul class="sp3list">
+					<li><img src="img/sp4.png" alt=""></li>
+					<li><img src="img/sp4.png" alt=""></li>
+					<li><img src="img/sp4.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="footer">
+				<p class="fttext">京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763</p>
+				<p class="fttext">Copyright©2015 51dsp.com All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		function move(x){
+			if(x==0){
+				$(".header").stop().animate({
+					bottom:0
+				})
+			}else{
+				$(".header").stop().animate({
+					bottom:$(window).height()-$(".header").height()
+				})
+			}
+			$('.hnindex').eq(x).addClass("hnindexsel").siblings().removeClass("hnindexsel");
+			$(".page").eq(x).css("display","block").siblings().css("display","none");
+			switch(x){
+				case 1:
+					$(".sp2_1").slideDown(function(){
+						$(".sp2_m").slideDown();
+						function moveY(obj){
+							for(var i=0;i<obj.length;i++){
+								(function(i){
+									setTimeout(function(){obj.eq(i).css("transform","rotateY(0deg)")},300*i);
+								})(i);
+							}
+						}
+						moveY($(".sp2_l li"));
+						moveY($(".sp2_r li"));
+					});
+					break;
+				case 2:
+					function moveZ(obj,t,deg){
+						var timer=null;
+						timer=setInterval(function(){
+							setTimeout(function(){
+								obj.css("transform","rotateZ("+deg+"deg)");
+							},0);
+							setTimeout(function(){
+								obj.css("transform","rotateZ("+(-deg)+"deg)");
+							},50*t);
+						},100*t);
+						return timer;
+					}
+					var timercurrent=null;
+					$(".sp3list li").hover(function(){
+						var index=$(".sp3list li").index(this)+1;
+						console.log(index)
+						timercurrent=moveZ($(this),index,index*5);
+					},function(){
+						clearInterval(timercurrent);
+						$(this).css("transform","rotateZ(0deg)");
+					})
+					break;
+				default:
+					break;
+			}
+		}
+	</script>
+	<script src="js/public.js"></script>
+</body>
+</html>
