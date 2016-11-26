@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>标题</title>
+     <meta name="keywords" content="">
+     <meta name="description" content="">
+</head>
+<body>
+     <div id="result"></div>
+     <script>
+          var source=new EventSource("textsse.php");
+          source.onmessage=function(event)
+          {
+              document.getElementById("result").innerHTML+=event.data + "<br>";
+          };
+     </script>
+</body>
+</html>
