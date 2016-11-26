@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>标题</title>
+     <meta name="keywords" content="">
+     <meta name="description" content="">
+</head>
+<body>
+     <p>计数： <output id="result"></output></p>
+     <button onclick="startWorker()">开始工作</button> 
+     <button onclick="stopWorker()">停止工作</button>
+     <script>
+          var res = document.getElementById('result');
+          var btn = document.getElementsByTagName('button');
+          var w;
+          //web Worker
+          /*当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。
+          web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。*/
+          function startWorker(){
+               if(window.Worker){
+                    if(typeof(w)==="undefined"){
+                         w = new Worker("textWork.js");
+                         w.onmessage=function(event){
+                              res.innerHTML=event.data;
+                         }
+                    }
+               }else{
+                    alert("不支持web Worker");
+               }
+          }
+
+          function stopWorker() { 
+              w.terminate();
+              w = undefined;
+          }
+     </script>
+</body>
+</html>
